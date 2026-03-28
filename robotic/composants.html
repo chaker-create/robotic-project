@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Composants - Robotique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🤖 L'Univers de la Robotique</h1>
+        <nav>
+            <ul>
+                <li><a href="definition.html">Définition</a></li>
+                <li><a href="composants.html">Composants</a></li>
+                <li><a href="index.html">Types</a></li>
+                <li><a href="futur.html">Futur</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Les 3 Composants Principaux</h2>
+            <p>Pour qu'un robot fonctionne, il a besoin de trois parties essentielles qui travaillent ensemble :</p>
+            
+            <ul>
+                <li>
+                    <strong>1. Les Capteurs (Sensors) :</strong> 
+                    Ce sont les "yeux" et les "oreilles" du robot. Ils lui permettent de collecter des informations sur le monde extérieur (température, lumière, distance, image).
+                </li>
+                <li>
+                    <strong>2. Le Cerveau (Processeur/Algorithme) :</strong> 
+                    C'est l'ordinateur embarqué. Il reçoit les informations des capteurs, les analyse et prend une décision selon le programme installé.
+                </li>
+                <li>
+                    <strong>3. Les Effecteurs (Actionneurs) :</strong> 
+                    Ce sont les "muscules" du robot. Ils reçoivent l'ordre du cerveau pour agir physiquement (moteurs pour rouler, bras pour saisir un objet).
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Projet scolaire - chaker hadjkacem </p>
+    </footer>
+       
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 50);
+
+           
+            var links = document.querySelectorAll("a");
+            
+            links.forEach(function(link) {
+                link.addEventListener("click", function(e) {
+                    var target = this.getAttribute("href");
+     
+                    if (target && !target.startsWith("#")) {
+                        e.preventDefault(); 
+                        document.body.style.opacity = "0"; 
+                        
+                   
+                        setTimeout(function() {
+                            window.location.href = target;
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

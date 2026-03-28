@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Futur - Robotique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🤖 L'Univers de la Robotique</h1>
+        <nav>
+            <ul>
+                <li><a href="definition.html">Définition</a></li>
+                <li><a href="composants.html">Composants</a></li>
+                <li><a href="index.html">Types</a></li>
+                <li><a href="futur.html">Futur</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Le Futur de la Robotique</h2>
+            <p>La technologie évolue très vite. Qu'est-ce qui nous attend dans les années à venir ?</p>
+            
+            <p>
+                Dans le futur, nous aurons certainement des <strong>voitures autonomes</strong> qui conduisent sans chauffeur, ce qui réduira les accidents. 
+                Nous verrons aussi des <strong>robots compagnons</strong> capables de discuter avec nous et de comprendre nos émotions.
+            </p>
+            <p>
+                Dans le domaine de la santé, les nanorobots pourraient voyager dans notre corps pour guérir des maladies de l'intérieur. 
+                L'intelligence artificielle rendra les robots de plus en plus intelligents et indépendants.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Projet scolaire - chaker hadjkacem </p>
+    </footer>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+           
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 50);
+
+           
+            var links = document.querySelectorAll("a");
+            
+            links.forEach(function(link) {
+                link.addEventListener("click", function(e) {
+                    var target = this.getAttribute("href");
+                    
+                    
+                    if (target && !target.startsWith("#")) {
+                        e.preventDefault(); 
+                        document.body.style.opacity = "0"; 
+                        
+                        
+                        setTimeout(function() {
+                            window.location.href = target;
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

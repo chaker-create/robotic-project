@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Définition - Robotique</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🤖 L'Univers de la Robotique</h1>
+        <nav>
+            <ul>
+                <li><a href="definition.html">Définition</a></li>
+                <li><a href="composants.html">Composants</a></li>
+                <li><a href="index.html">Types</a></li>
+                <li><a href="futur.html">Futur</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>🤖 C’est quoi un robot ?</h2>
+            <p>
+                Un robot est une machine programmée pour exécuter des tâches automatiquement, sans intervention humaine constante.
+                Il peut fonctionner seul ou être contrôlé par un humain.
+            </p>
+            <p>
+                Le terme "robot" vient du mot tchèque "robota", qui signifie "travail forcé" ou "corvée". 
+                Aujourd'hui, les robots sont partout : dans les usines, dans les maisons et même dans l'espace !
+            </p>
+            <img src="robots.png" alt="Image de robot">
+        </section>
+    </div>
+
+    <footer>
+        <p>Projet scolaire - chaker hadjkacem </p>
+    </footer>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 50);
+
+           
+            var links = document.querySelectorAll("a");
+            
+            links.forEach(function(link) {
+                link.addEventListener("click", function(e) {
+                    var target = this.getAttribute("href");
+                    
+                  
+                    if (target && !target.startsWith("#")) {
+                        e.preventDefault(); 
+                        document.body.style.opacity = "0";
+                        
+                        
+                        setTimeout(function() {
+                            window.location.href = target;
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

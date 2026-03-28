@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Types - Robotique</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🤖 L'Univers de la Robotique</h1>
+      <nav>
+        <ul>
+          <li><a href="definition.html">Définition</a></li>
+          <li><a href="composants.html">Composants</a></li>
+          <li><a href="index.html">Types</a></li>
+          <li><a href="futur.html">Futur</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section>
+        <h2>Les Différents Types de Robots</h2>
+        <p>
+          Les robots sont classés selon leur utilité et leur forme. Voici les
+          principales catégories :
+        </p>
+
+        <ul>
+          <li>
+            <strong>Les Robots Industriels :</strong>On les trouve dans les
+            usines comme celles de Toyota ou Tesla. Ils servent à assembler des
+            voitures, souder, peindre… Ils sont rapides et très précis.
+          </li>
+          <li>
+            <strong>Les Robots Domestiques :</strong> Ils nous aident à la
+            maison, comme les aspirateurs automatiques ou les robots de cuisine.
+            Par exemple Roomba. Il nettoie la maison automatiquement 🧹.
+          </li>
+          <li>
+            <strong>Les Robots Humanoïdes :</strong> Ils ressemblent à des êtres
+            humains (tête, torse, bras, jambes). Ils sont souvent utilisés pour
+            la recherche ou l'assistance aux personnes âgées.
+          </li>
+          <li>
+            <strong>Les Robots Médicaux :</strong> Ils assistent les chirurgiens
+            pour faire des opérations très précises.Comme le da Vinci Surgical
+            System. Ils assistent les médecins pendant les opérations
+            chirurgicales avec une grande précision.
+          </li>
+          <li>
+            <strong>Les Robots de Service :</strong> Ils travaillent dans les
+            hôtels, les restaurants ou les aéroports pour aider les clients. Par
+            exemple, Pepper.
+          </li>
+          <li>
+            <strong>Robots avancés (intelligents):</strong> Développés par des
+            entreprises comme Boston Dynamics. Certains robots peuvent marcher,
+            courir et garder l'équilibre comme un humain.
+          </li>
+        </ul>
+
+        <img src="group-of-robots.png" alt="Types de robots" />
+      </section>
+    </div>
+
+    <footer>
+      <p>Projet scolaire - chaker hadjkacem </p>
+    </footer>
+        
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            document.body.style.opacity = "0";
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 50);
+
+            
+            var links = document.querySelectorAll("a");
+            
+            links.forEach(function(link) {
+                link.addEventListener("click", function(e) {
+                    var target = this.getAttribute("href");
+                    
+                    
+                    if (target && !target.startsWith("#")) {
+                        e.preventDefault();
+                        document.body.style.opacity = "0";
+                        
+                        
+                        setTimeout(function() {
+                            window.location.href = target;
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
